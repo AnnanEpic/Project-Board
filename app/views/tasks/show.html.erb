@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @task.project_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @task.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @task.status %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @task.due_date %>
+</p>
+
+<p>
+  <strong>Label:</strong>
+  <%= @task.label %>
+</p>
+
+<%if @task.status != "Done"%>
+  <%= link_to 'Edit', edit_task_path(@task) %> |
+<%end%>
+<%= link_to 'Back', tasks_path %>
